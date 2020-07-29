@@ -1,5 +1,5 @@
 # jellybeans-plus-theme
-An emacs replica of nanotech/jellybeans.vim for emacs
+A fork of nanotech/jellybeans.vim for emacs with brighter colors I like more
 
 See the [wiki](https://github.com/jsmestad/jellybeans-plus-theme/wiki) for information on modifying Emacs built-in `ruby-mode` to highlight symbols and `self` correctly.
 
@@ -8,13 +8,28 @@ See the [wiki](https://github.com/jsmestad/jellybeans-plus-theme/wiki) for infor
 For folks who use [spacemacs](http://spacemacs.org), here is how to install the theme.
 
 ```lisp
-dotspacemacs-additional-packages '((jellybeans-plus-theme :location (recipe
-                                                                    :fetcher github
-                                                                    :repo "jsmestad/jellybeans-plus-theme")))
+dotspacemacs-additional-packages '((unsuess-theme :location (recipe
+                                                            :fetcher github
+                                                            :repo "Teu5us/unsuess-theme")))
 ```
 
 ```lisp
-dotspacemacs-themes '(jellybeans-plus)
+dotspacemacs-themes '(unsuess)
+```
+
+## Doom install
+
+In `packages.el`:
+
+``` lisp
+(package! unsuess-theme
+  :recipe (:host github :repo "Teu5us/unsuess-theme"))
+```
+
+In personal config:
+
+``` lisp
+(setq doom-theme 'unsuess)
 ```
 
 ## Preview
@@ -32,3 +47,5 @@ Please contribute and thank you all in advance!
 Thank you [nanotech/jellybeans.vim](https://github.com/nanotech/jellybeans.vim) for the original, and still best theme.
 
 Thank you to [@marktran](https://github.com/marktran) for his [ujelly](https://github.com/marktran/color-theme-ujelly) port, and [@maerten](https://github.com/maerten) for his fork. This work is built on what you guys started.
+
+Thank you to [jsmestad/jellybeans-plus-theme](https://github.com/jsmestad/jellybeans-plus-theme), a fork of which this theme is.
